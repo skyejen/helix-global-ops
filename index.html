@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>HELIX Global Ops</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link
+    rel="stylesheet"
+    href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+    crossorigin=""
+  />
+  <style>
+    body {
+      background-color: #000;
+      color: white;
+      font-family: system-ui, sans-serif;
+    }
+    .legend {
+      background: #1f2937;
+      padding: 10px;
+      border-radius: 6px;
+      font-size: 0.8rem;
+      color: white;
+      line-height: 1.5;
+    }
+    .legend i {
+      width: 12px;
+      height: 12px;
+      float: left;
+      margin-right: 8px;
+      opacity: 0.8;
+    }
+
+    .leaflet-popup-content-wrapper {
+  background-color: #1e1e2e !important; /* dark grey-blue tone */
+  color: #e0e0e0 !important;
+  border-radius: 12px !important;
+  box-shadow: 0 0 10px #14b8a6; /* teal glow */
+}
+
+.leaflet-popup-content {
+  margin: 8px 12px;
+  font-size: 0.9rem;
+  line-height: 1.4;
+}
+
+.leaflet-popup-content .popup-role {
+  font-weight: bold;
+  color: #00f0ff; /* optional: accent colour for role */
+}
+
+.leaflet-popup-tip {
+  background: #1e1e2e;
+}
+
+.leaflet-popup-content {
+  margin: 0 !important;
+  padding: 4px 6px !important; /* Tiny horizontal & vertical padding */
+}
+  </style>
+</head>
+<body class="bg-black text-white font-sans">
+
+  <header class="p-6 border-b border-teal-500">
+    <h1 class="text-3xl font-bold text-teal-400">🌍 HELIX Global Ops</h1>
+    <p class="text-sm text-gray-400">A map view of our team</p>
+  </header>
+
+  <!-- Map Only -->
+  <main class="p-6">
+    <div id="map" class="h-[600px] w-full rounded border border-teal-500"></div>
+  </main>
+
+  <!-- Scripts -->
+  <script src="https://cdn.jsdelivr.net/npm/luxon@3.4.3/build/global/luxon.min.js"></script>
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" crossorigin=""></script>
+  <script src="script.js"></script>
+</body>
+</html>

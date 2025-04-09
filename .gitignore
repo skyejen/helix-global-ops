@@ -1,0 +1,15 @@
+# macOS
+.DS_Store
+
+# node/npm
+node_modules/
+
+# VS Code
+.vscode/
+
+# Logs
+*.log
+
+# Build output
+dist/
+build/

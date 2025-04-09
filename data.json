@@ -1,0 +1,210 @@
+[
+    {
+      "name": "Jen Skye",
+      "role": "QA Lead",
+      "department": "QA",
+      "location": "Glasgow, Scotland",
+      "coords": [55.8642, -4.2518],
+      "timezone": "Europe/London",
+      "image": "https://media.licdn.com/dms/image/v2/D4E03AQGSKWtaGzIrtg/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1694089410183?e=1749686400&v=beta&t=VjsK1UmUsLIy9NpyqFhE50PU8Ii_QAKGoUjeJEvhl8U"
+    },
+    {
+      "name": "Kostas Zarifis",
+      "role": "Game Director",
+      "department": "Other",
+      "location": "Guildford, UK",
+      "coords": [51.2362, -0.5704],
+      "timezone": "Europe/London",
+      "image": "https://media.licdn.com/dms/image/v2/D4E35AQFaVzLTN0AOag/profile-framedphoto-shrink_200_200/profile-framedphoto-shrink_200_200/0/1738755861446?e=1744808400&v=beta&t=veWcC37cnbr4xRFtjrdXEq9fkpzPcrV9oWqiiwOSO1E"
+    },
+    {
+      "name": "Joshua Eger",
+      "role": "Lead Lua Programmer",
+      "department": "Lua",
+      "location": "Quincy, US",
+      "coords": [39.9356, -91.4099],
+      "timezone": "America/Chicago",
+      "image": "https://media.licdn.com/dms/image/v2/C4E03AQHqTZUurSeCLw/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1558560212888?e=1749686400&v=beta&t=DqWcY1jsVn5zi1dUVlymXix-vHdV5Zhw_5tC3QvpvaQ"
+    },
+    {
+      "name": "Ross Hankinson",
+      "role": "Technical Artist",
+      "department": "Art/Design",
+      "location": "Newcastle, UK",
+      "coords": [54.9784, -1.6174],
+      "timezone": "Europe/London",
+      "image": "https://media.licdn.com/dms/image/v2/D4E03AQEVncV6WVjnSA/profile-displayphoto-shrink_800_800/B4EZT5rFUMGgAg-/0/1739355609153?e=1749686400&v=beta&t=7mfnH93XDV1kGyyy-97ytbQ2KUr-guS8dt9cms3ylOA"
+    },
+    {
+      "name": "Iraj Mohtasham",
+      "role": "Senior Developer (Vehicle Specialist)",
+      "department": "Development",
+      "location": "Istanbul, Turkey",
+      "coords": [41.0082, 28.9784],
+      "timezone": "Europe/Istanbul",
+      "image": "https://www.repro.cam.ac.uk/sites/default/files/images/profile/no-photo.png"
+    },
+    {
+      "name": "Josip Duvancic",
+      "role": "Principle Game Engineer",
+      "department": "Development",
+      "location": "TBC",
+      "coords": null,
+      "timezone": "XXX",
+      "image": "https://media.licdn.com/dms/image/v2/D4E03AQFAH6wASjR-Ug/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1666543148459?e=1749686400&v=beta&t=eTtO22JEtIkUBgdvEb-p_0uex11PqAixHZAW9gzWK1w"
+    },
+    {
+        "name": "Alex Zhou",
+        "role": "Wed Developer",
+        "department": "Development",
+        "location": "San Francisco, US",
+        "coords": [37.7749, -122.4194],
+        "timezone": "America/Los_Angeles",
+        "image": "https://www.repro.cam.ac.uk/sites/default/files/images/profile/no-photo.png"
+    },
+    {
+        "name": "Callum Bush",
+        "role": "TBC",
+        "department": "Other",
+        "location": "Croydon, UK",
+        "coords": [51.3721, -0.0982],
+        "timezone": "Europe/London",
+        "image": "https://media.licdn.com/dms/image/v2/C4E03AQFVjPQMc0p5lg/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1517728320009?e=1749686400&v=beta&t=lMkiY0KsT5vp-sD7DEMMutzPgHmJwIcKABOaqsyT5s0"
+    },
+    {
+        "name": "Callum Noble",
+        "role": "UI/UX Designer / Webflow Developer",
+        "department": "Art/Design",
+        "location": "Manchester, UK",
+        "coords": [53.4808, -2.2426],
+        "timezone": "Europe/London",
+        "image": "https://media.licdn.com/dms/image/v2/D4E03AQEBB3VR4_rqdg/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1729109695550?e=1749686400&v=beta&t=Wy6dfPWnMa_i5QbqH8TGCBRq_e5MZQCXBSG5XANKWZo"
+    },
+    {
+        "name": "Hamid Jalili",
+        "role": "Sr. Technical & Lighting Artist",
+        "department": "Art/Design",
+        "location": "Guildford, UK",
+        "coords": [51.2362, -0.5704],
+        "timezone": "Europe/London",
+        "image": "https://media.licdn.com/dms/image/v2/C4D03AQFogBhr98lXcg/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1635512244209?e=1749686400&v=beta&t=wmNAqoQA1V7Cfd_c5c6GXhl-yo32j69Hyd70WZgPpYg"
+    },
+    {
+        "name": "James Jarman",
+        "role": "Gameplay & Backend Engineer",
+        "department": "Development",
+        "location": "Bristol, UK",
+        "coords": [51.4545, -2.5879],
+        "timezone": "Europe/London",
+        "image": "https://media.licdn.com/dms/image/v2/D4E03AQEAh21kFO-dMg/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1727190196461?e=1749686400&v=beta&t=qW14eGQrazD4TG8M9WPuWwtBZ497HiyDaiKMS8qdBKo"
+    },
+    {
+        "name": "Krzysztof Jarnicki",
+        "role": "Unreal DevOps & Gameplay Engineer",
+        "department": "Development",
+        "location": "Warsaw, Poland",
+        "coords": [52.2297, 21.0122],
+        "timezone": "Europe/Warsaw",
+        "image": "https://media.licdn.com/dms/image/v2/D4D03AQEVz5AwBR6mEQ/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1713283991407?e=1749686400&v=beta&t=iOtGfvd80jdd0Nq-7rIwkE7stZbdJN_kCztwWg3zAg8"
+    },
+    {
+        "name": "Krzysztof Moskaluk",
+        "role": "Senior Unreal Engineer",
+        "department": "Development",
+        "location": "Warsaw, Poland",
+        "coords": [52.2297, 21.0122],
+        "timezone": "Europe/Warsaw",
+        "image": "https://media.licdn.com/dms/image/v2/D4D03AQGQEzsGyrla-A/profile-displayphoto-shrink_800_800/B4DZWgw8ugHAAc-/0/1742158941771?e=1749686400&v=beta&t=eYliOO7Rt5aRA1uwI-DF3L9eDVAuFeemURjD1hfO7YQ"
+    },
+    {
+        "name": "Doğa Can Yanıkoğlu",
+        "role": "Gameplay Animation Programmer",
+        "department": "Animation",
+        "location": "Istanbul, Turkey",
+        "coords": [41.0082, 28.9784],
+        "timezone": "Europe/Istanbul",
+        "image": "https://media.licdn.com/dms/image/v2/D5603AQGcR32r2BAoTA/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1710351149923?e=1749686400&v=beta&t=Lihw8gocQMtf-vi7nhBrlO3BRFuLEB8xNH8_DSnVq_c"
+    },
+    {
+        "name": "Joel Teer",
+        "role": "Lua Engineer",
+        "department": "Lua",
+        "location": "Liverpool, UK",
+        "coords": [53.4084, -2.9916],
+        "timezone": "Europe/London",
+        "image": "https://www.repro.cam.ac.uk/sites/default/files/images/profile/no-photo.png"
+    },
+    {
+        "name": "Francis Courchinoux",
+        "role": "Senior Environment Artist",
+        "department": "Art/Design",
+        "location": "Lyon, France",
+        "coords": [45.75, 4.85],
+        "timezone": "Europe/Paris",
+        "image": "https://media.licdn.com/dms/image/v2/D4E03AQEsCV6wmnniaQ/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1728035179844?e=1749686400&v=beta&t=E9fNcZC1aySYYQ2-2xCN1KZF0HlpTTUTIMUdAWsL8KA"
+    },
+    {
+        "name": "Rob Palmer",
+        "role": "Environment Artist",
+        "department": "Art/Design",
+        "location": "Aldershot, UK",
+        "coords": [51.2476, -0.7580],
+        "timezone": "Europe/London",
+        "image": "https://media.licdn.com/dms/image/v2/D4E03AQFSY_aZS5-dag/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1724319705364?e=1749686400&v=beta&t=qQsbDjXS6I3qhiF7uHe2Tddt_2dVpFgZ-USTHbYRK6A"
+    },
+    {
+        "name": "David Barbosa",
+        "role": "3D Artist",
+        "department": "Art/Design",
+        "location": "Rio, Brazil",
+        "coords": [-22.9068, -43.1729],
+        "timezone": "America/Sao_Paulo",
+        "image": "https://media.licdn.com/dms/image/v2/C4D03AQEyCgnsm7ROLQ/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1634606463749?e=1749686400&v=beta&t=070iJh0VKvFVUaQwovIM_k5sj2pt2p1Sxvi_nTKdFBA"
+    },
+    {
+        "name": "David Chiu",
+        "role": "Head of Business Development and Developer Relations",
+        "department": "Other",
+        "location": "San Francisco, US",
+        "coords": [37.7749, -122.4194],
+        "timezone": "America/Los_Angeles",
+        "image": "https://media.licdn.com/dms/image/v2/C5103AQGPvwOqdWOE2w/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1516248231407?e=1749686400&v=beta&t=xPCidyBk3-3pd91u4s2jxicXHP_1EhYChFDFNNooUEY"
+    },
+    {
+        "name": "Vince McMullin",
+        "role": "Senior Gameplay Programmer (Character)",
+        "department": "Development",
+        "location": "Saint John, Canada",
+        "coords": [45.2733, -66.0633],
+        "timezone": "America/Moncton",
+        "image": "https://media.licdn.com/dms/image/v2/D5603AQHMinTOO9QKDQ/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1718272449507?e=1749686400&v=beta&t=T_LifufcaPz2genXQq1h3h_N1EtS8-87x4Ob_kPzZv8"
+    },
+    {
+        "name": "Reema Boualayan",
+        "role": "Technical Animator",
+        "department": "Animation",
+        "location": "Al Asimah, Kuwait",
+        "coords": [29.3759, 47.9774],
+        "timezone": "Asia/Kuwait",
+        "image": "https://media.licdn.com/dms/image/v2/C4D03AQH-Lutl6bfWQw/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1604572462176?e=1749686400&v=beta&t=K1IcOxfklinsfjIn6IoypVzy4nzfpa2_ZA0a9KrV0KY"
+    },
+    {
+        "name": "Facundo Utrico (Kravs)",
+        "role": "Lua Engineer",
+        "department": "Lua",
+        "location": "Uruguay, South America",
+        "coords": [-34.9011, -56.1645],
+        "timezone": "America/Montevideo",
+        "image": "https://media.licdn.com/dms/image/v2/D4D03AQEAT337FK84AQ/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1712346537624?e=1749686400&v=beta&t=1ugMXuUBur9VWINqmtrl9KKyQdVBD3yI4ioLqxhWQW8"
+    },
+    {
+        "name": "Houssam Eddine (Jotar)",
+        "role": "Unreal Engine Game developer",
+        "department": "Development",
+        "location": "Constantine, Algeria",
+        "coords": [36.3650, 6.6147],
+        "timezone": "Africa/Algiers",
+        "image": "https://media.licdn.com/dms/image/v2/D4D35AQGPH6RgaszT5g/profile-framedphoto-shrink_800_800/profile-framedphoto-shrink_800_800/0/1726874103579?e=1744808400&v=beta&t=il2WCxcevHYx0486ALSu4q3ZsgYw8AEfD7z7Za_VsHA"
+    }
+  ]
+  
