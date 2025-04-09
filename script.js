@@ -1,6 +1,6 @@
 let teamData = [];
 let map;
-let markerGroup;
+let markerCluster;
 let markerStyle = "color"; // 'color' or 'photo'
 
 const departmentColors = {
@@ -36,9 +36,9 @@ function getTimeDisplay(timezone) {
       diff === 0
         ? "Same time as you"
         : `${diff / 60 > 0 ? "+" : ""}${diff / 60}h ${diff > 0 ? "ahead" : "behind"}`;
-    return `⏰ ${now.toFormat("HH:mm")} (${label})`;
+    return `🕒 ${now.toFormat("HH:mm")} (${label})`;
   }
-  return "⏰ Invalid timezone";
+  return "🕒 Invalid timezone";
 }
 
 function initMap() {
@@ -46,9 +46,28 @@ function initMap() {
   L.tileLayer("https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png", {
     attribution: "&copy; CARTO, OpenStreetMap",
   }).addTo(map);
-  markerGroup = L.layerGroup().addTo(map);
 
-  // ✅ Legend with squares
+  markerCluster = L.markerClusterGroup({
+    showCoverageOnHover: false,
+    maxClusterRadius: 40,
+    iconCreateFunction: function (cluster) {
+      const count = cluster.getChildCount();
+      
+      // Dynamically scale size based on count
+      let size = 30 + Math.min(count, 50); // cap at 80px for large clusters
+    
+      return L.divIcon({
+        html: `<div class="cluster-glow">${count}</div>`,
+        className: 'custom-cluster',
+        iconSize: [size, size],
+        iconAnchor: [size / 2, size / 2]
+      });
+    }    
+  });
+
+  map.addLayer(markerCluster);
+
+  // ✅ Legend
   const legend = L.control({ position: "topright" });
   legend.onAdd = function () {
     const div = L.DomUtil.create("div", "info legend");
@@ -65,12 +84,11 @@ function initMap() {
     }
     return div;
   };
-
   legend.addTo(map);
 }
 
 function renderMap(data) {
-  markerGroup.clearLayers();
+  markerCluster.clearLayers();
   const seenCoords = new Map();
 
   data.forEach((person) => {
@@ -86,13 +104,12 @@ function renderMap(data) {
 
       if (markerStyle === "color") {
         const markerColor = departmentColors[person.department] || "#FFFFFF";
-        marker = L.circleMarker([lat, lng], {
-          radius: 8,
-          fillColor: markerColor,
-          color: markerColor,
-          weight: 1,
-          opacity: 0.8,
-          fillOpacity: 0.6,
+        marker = L.marker([lat, lng], {
+          icon: L.divIcon({
+            className: 'custom-color-pin',
+            html: `<div style="background:${markerColor};width:12px;height:12px;border-radius:50%;"></div>`,
+            iconSize: [12, 12],
+          })
         });
       } else {
         const icon = L.icon({
@@ -104,16 +121,16 @@ function renderMap(data) {
       }
 
       const popupHTML = `
-      <div style="text-align:center; padding: 8px 10px;">
-        <img src="${person.image}" style="width:50px;height:50px;border-radius:50%;border:2px solid #14b8a6; margin: auto;">
-        <div style="font-weight:bold;color:#14b8a6">${person.name}</div>
-        <div style="font-weight:bold; color: #00eefd; font-size: 0.9rem;">${person.role}</div>
-        <div style="font-size:smaller; padding-bottom: 1px">${person.location}</div>
-        <div style="font-size:x-small;color:gray">🕒 ${getTimeDisplay(person.timezone).replace(/^⏰ /, "")}</div>
-      </div>`;
+        <div style="text-align:center; padding: 8px 10px;">
+          <img src="${person.image}" style="width:50px;height:50px;border-radius:50%;border:2px solid #14b8a6; margin: auto;">
+          <div style="font-weight:bold;color:#14b8a6">${person.name}</div>
+          <div style="font-weight:bold; color: #00eefd; font-size: 0.9rem;">${person.role}</div>
+          <div style="font-size:smaller; padding-bottom: 1px">${person.location}</div>
+          <div style="font-size:x-small;color:gray">${getTimeDisplay(person.timezone)}</div>
+        </div>`;
 
       marker.bindPopup(popupHTML);
-      markerGroup.addLayer(marker);
+      markerCluster.addLayer(marker);
     }
   });
 
