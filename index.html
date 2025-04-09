@@ -32,12 +32,22 @@
       opacity: 0.8;
     }
 
+    .legend i {
+      display: inline-block;
+      width: 12px;
+      height: 12px;
+      margin-right: 6px;
+      margin-top: 2px;
+      border-radius: 50%;
+      vertical-align: middle;
+    }
+
     .leaflet-popup-content-wrapper {
-  background-color: #1e1e2e !important; /* dark grey-blue tone */
-  color: #e0e0e0 !important;
-  border-radius: 12px !important;
-  box-shadow: 0 0 10px #14b8a6; /* teal glow */
-}
+      background-color: #1e1e2e !important; /* dark grey-blue tone */
+      color: #e0e0e0 !important;
+      border-radius: 12px !important;
+      box-shadow: 0 0 10px #14b8a6; /* teal glow */
+    }
 
 .leaflet-popup-content {
   margin: 8px 12px;
@@ -69,6 +79,10 @@
 
   <!-- Map Only -->
   <main class="p-6">
+    <button id="togglePinsBtn" class="mb-4 px-4 py-2 bg-teal-600 text-white rounded hover:bg-teal-700">
+      Switch to Profile Pics
+    </button>
+    
     <div id="map" class="h-[600px] w-full rounded border border-teal-500"></div>
   </main>
 
