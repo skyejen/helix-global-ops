@@ -35,9 +35,7 @@ function getTimeDisplay(timezone) {
     const label =
       diff === 0
         ? "Same time as you"
-        : `${diff / 60 > 0 ? "+" : ""}${diff / 60}h ${
-            diff > 0 ? "ahead" : "behind"
-          }`;
+        : `${diff / 60 > 0 ? "+" : ""}${diff / 60}h ${diff > 0 ? "ahead" : "behind"}`;
     return `⏰ ${now.toFormat("HH:mm")} (${label})`;
   }
   return "⏰ Invalid timezone";
@@ -50,16 +48,24 @@ function initMap() {
   }).addTo(map);
   markerGroup = L.layerGroup().addTo(map);
 
-  // ✅ Add legend
+  // ✅ Legend with squares
   const legend = L.control({ position: "topright" });
   legend.onAdd = function () {
     const div = L.DomUtil.create("div", "info legend");
-    div.innerHTML = "<strong>Departments</strong><br>";
     for (const [dept, color] of Object.entries(departmentColors)) {
-      div.innerHTML += `<i style="background:${color};display:inline-block;width:12px;height:12px;margin-right:6px;border-radius:50%;"></i>${dept}<br>`;
+      div.innerHTML += `
+        <div style="
+          background:${color};
+          width:12px;
+          height:12px;
+          display:inline-block;
+          margin-right:6px;
+          border-radius:2px;
+        "></div>${dept}<br>`;
     }
     return div;
   };
+
   legend.addTo(map);
 }
 
@@ -98,13 +104,13 @@ function renderMap(data) {
       }
 
       const popupHTML = `
-        <div style="text-align:center">
-          <img src="${person.image}" style="width:50px;height:50px;border-radius:50%;border:2px solid #14b8a6;margin: auto; ">
-          <div style="font-weight:bold;color:#14b8a6">${person.name}</div>
-          <div style="font-weight:bold; color: #00eefd; font-size: 0.9rem;">${person.role}</div>
-          <div style="font-size:smaller">${person.location}</div>
-          <div style="font-size:x-small;color:gray">${getTimeDisplay(person.timezone)}</div>
-        </div>`;
+      <div style="text-align:center; padding: 8px 10px;">
+        <img src="${person.image}" style="width:50px;height:50px;border-radius:50%;border:2px solid #14b8a6; margin: auto;">
+        <div style="font-weight:bold;color:#14b8a6">${person.name}</div>
+        <div style="font-weight:bold; color: #00eefd; font-size: 0.9rem;">${person.role}</div>
+        <div style="font-size:smaller; padding-bottom: 1px">${person.location}</div>
+        <div style="font-size:x-small;color:gray">🕒 ${getTimeDisplay(person.timezone).replace(/^⏰ /, "")}</div>
+      </div>`;
 
       marker.bindPopup(popupHTML);
       markerGroup.addLayer(marker);
