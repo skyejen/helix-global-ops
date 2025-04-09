@@ -42,27 +42,37 @@ function getTimeDisplay(timezone) {
 }
 
 function initMap() {
-  map = L.map("map").setView([30, 0], 2);
+  map = L.map("map", {
+    center: [20, 0],
+    zoom: 2,
+    minZoom: 2,
+    maxBounds: [[-58, -169.9999], [85, 179.9999]],  // tightly clamp to one world
+    maxBoundsViscosity: 1.0, // full bounceback
+  });
+  
   L.tileLayer("https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png", {
     attribution: "&copy; CARTO, OpenStreetMap",
+    noWrap: true,
+    bounds: [[-58, -179.9999], [85, 179.9999]],
+    tileSize: 256,
+    keepBuffer: 2, // ←✨ preloads 2 extra tiles outside viewport!
   }).addTo(map);
+  
+  
 
   markerCluster = L.markerClusterGroup({
     showCoverageOnHover: false,
     maxClusterRadius: 40,
     iconCreateFunction: function (cluster) {
       const count = cluster.getChildCount();
-      
-      // Dynamically scale size based on count
-      let size = 30 + Math.min(count, 50); // cap at 80px for large clusters
-    
+      let size = 30 + Math.min(count, 50); // cap at 80px
       return L.divIcon({
         html: `<div class="cluster-glow">${count}</div>`,
         className: 'custom-cluster',
         iconSize: [size, size],
-        iconAnchor: [size / 2, size / 2]
+        iconAnchor: [size / 2, size / 2],
       });
-    }    
+    }
   });
 
   map.addLayer(markerCluster);
@@ -86,6 +96,7 @@ function initMap() {
   };
   legend.addTo(map);
 }
+
 
 function renderMap(data) {
   markerCluster.clearLayers();
